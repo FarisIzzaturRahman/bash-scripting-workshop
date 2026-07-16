@@ -1,6 +1,5 @@
 # 🧬 Case Study 1 — Analisis File FASTA
 
-> **Durasi:** 60 menit
 > **Level:** Beginner
 > **Data:** `data/sequences.fasta`
 
@@ -40,7 +39,7 @@ head -20 data/sequences.fasta
 
 ---
 
-## 📝 Task 1: Eksplorasi Awal (10 menit)
+## 📝 Task 1: Eksplorasi Awal
 
 ### 1.1 Lihat isi file
 ```bash
@@ -84,7 +83,7 @@ grep -c "^>" data/sequences.fasta
 
 ---
 
-## 📝 Task 2: Analisis Header (10 menit)
+## 📝 Task 2: Analisis Header
 
 Header dalam file ini memiliki format:
 ```
@@ -147,7 +146,7 @@ grep "^>" data/sequences.fasta | cut -d '|' -f 2 | sort | uniq -c | sort -rn
 
 ---
 
-## 📝 Task 3: Analisis Sequence (15 menit)
+## 📝 Task 3: Analisis Sequence
 
 ### 3.1 Hitung total nukleotida
 
@@ -211,7 +210,7 @@ echo "AT count: $AT"
 
 ---
 
-## 📝 Task 4: Filter Sequence (10 menit)
+## 📝 Task 4: Filter Sequence
 
 ### 4.1 Ekstrak sekuens dari organisme tertentu
 
@@ -230,7 +229,7 @@ grep -c "^>" human_sequences.fasta
 
 ---
 
-## 📝 Task 5: Script Pelaporan Otomatis (15 menit)
+## 📝 Task 5: Script Pelaporan Otomatis
 
 Gunakan berkas template/skeleton script `analyze_fasta_template.sh` yang telah disediakan. Tugas Anda adalah melengkapi bagian `# TODO` di dalamnya agar script tersebut dapat berjalan otomatis menganalisis file FASTA apa saja yang dimasukkan sebagai argumen.
 

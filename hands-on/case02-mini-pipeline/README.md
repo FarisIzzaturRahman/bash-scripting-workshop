@@ -1,6 +1,5 @@
 # 🔬 Case Study 2 — Mini Bioinformatics Pipeline
 
-> **Durasi:** 40 menit
 > **Level:** Beginner–Intermediate
 > **Data:** `data/reads.fastq` dan `data/gene_regions.bed`
 
@@ -60,7 +59,7 @@ head -10 data/gene_regions.bed
 
 ---
 
-## 📝 Task 1: Setup Project Structure (5 menit)
+## 📝 Task 1: Setup Project Structure
 
 Setiap analisis bioinformatika yang baik dimulai dengan **struktur direktori yang terorganisir**.
 
@@ -97,7 +96,7 @@ cp data/gene_regions.bed my_pipeline/data/raw/
 
 ---
 
-## 📝 Task 2: QC Analysis FASTQ (15 menit)
+## 📝 Task 2: QC Analysis FASTQ
 
 ### 2.1 Statistik dasar FASTQ
 
@@ -179,7 +178,7 @@ cat my_pipeline/results/qc/fastq_qc_report.txt
 
 ---
 
-## 📝 Task 3: Analisis BED File (10 menit)
+## 📝 Task 3: Analisis BED File
 
 ### 3.1 Statistik dasar BED
 
@@ -244,7 +243,7 @@ awk '{print $6}' data/gene_regions.bed | sort | uniq -c
 
 ---
 
-## 📝 Task 4: Bangun Pipeline Script Otomatis (10 menit)
+## 📝 Task 4: Bangun Pipeline Script Otomatis
 
 Sekarang saatnya menyatukan semua perintah analisis di atas ke dalam satu bash script agar bisa dijalankan secara otomatis dengan satu perintah!
 

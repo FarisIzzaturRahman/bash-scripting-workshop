@@ -1,7 +1,5 @@
 # 🔬 Hands-on Session — Sesi Praktek
 
-> **Durasi:** 120 menit (12.30 – 14.30 WIB)
->
 > *"Belajar bioinformatika hanya efektif dengan praktek langsung!"*
 
 ---
@@ -9,35 +7,35 @@
 ## 🗺️ Gambaran Sesi Hands-on
 
 ```
-12.30 – 12.45  ┌──────────────────────────────────────┐
-               │  PERSIAPAN (15 menit)                │
-               │  • Pastikan terminal terbuka         │
-               │  • Clone/download repo ini           │
-               │  • Cek semua file tersedia           │
-               └──────────────────────────────────────┘
-                              ↓
-12.45 – 13.45  ┌──────────────────────────────────────┐
-               │  CASE STUDY 1 (60 menit)             │
-               │  🧬 Analisis File FASTA              │
-               │  • Eksplorasi multi-sequence FASTA   │
-               │  • Hitung statistik sequence         │
-               │  • Filter & ekstrak sequence         │
-               │  • Hitung GC content                 │
-               └──────────────────────────────────────┘
-                              ↓
-13.45 – 14.25  ┌──────────────────────────────────────┐
-               │  CASE STUDY 2 (40 menit)             │
-               │  🔬 Mini Bioinformatics Pipeline     │
-               │  • Setup project structure           │
-               │  • Proses file FASTQ                 │
-               │  • Otomasi dengan bash script        │
-               │  • Generate laporan                  │
-               └──────────────────────────────────────┘
-                              ↓
-14.25 – 14.30  ┌──────────────────────────────────────┐
-               │  REVIEW (5 menit)                    │
-               │  • Bahas solusi bersama              │
-               └──────────────────────────────────────┘
+   ┌──────────────────────────────────────┐
+   │  PERSIAPAN                           │
+   │  • Pastikan terminal terbuka         │
+   │  • Clone/download repo ini           │
+   │  • Cek semua file tersedia           │
+   └──────────────────────────────────────┘
+                      ↓
+   ┌──────────────────────────────────────┐
+   │  CASE STUDY 1                        │
+   │  🧬 Analisis File FASTA              │
+   │  • Eksplorasi multi-sequence FASTA   │
+   │  • Hitung statistik sequence         │
+   │  • Filter & ekstrak sequence         │
+   │  • Hitung GC content                 │
+   └──────────────────────────────────────┘
+                      ↓
+   ┌──────────────────────────────────────┐
+   │  CASE STUDY 2                        │
+   │  🔬 Mini Bioinformatics Pipeline     │
+   │  • Setup project structure           │
+   │  • Proses file FASTQ                 │
+   │  • Otomasi dengan bash script        │
+   │  • Generate laporan                  │
+   └──────────────────────────────────────┘
+                      ↓
+   ┌──────────────────────────────────────┐
+   │  REVIEW                              │
+   │  • Bahas solusi bersama              │
+   └──────────────────────────────────────┘
 ```
 
 ---

@@ -33,6 +33,14 @@
    └──────────────────────────────────────┘
                       ↓
    ┌──────────────────────────────────────┐
+   │  CASE STUDY 3 (BONUS CHALLENGE)      │
+   │  🧬 DNA Motif / Restriction Scanner  │
+   │  • Cari situs pemotongan EcoRI       │
+   │  • Otomasi pencarian dengan argumen  │
+   │  • Konversi indeks koordinat basa    │
+   └──────────────────────────────────────┘
+                      ↓
+   ┌──────────────────────────────────────┐
    │  REVIEW                              │
    │  • Bahas solusi bersama              │
    └──────────────────────────────────────┘
@@ -51,11 +59,18 @@ hands-on/
 │   └── solutions/
 │       └── solution.sh     ← Solusi (JANGAN DILIHAT DULU! 😄)
 │
-└── case02-mini-pipeline/
-    ├── README.md           ← Instruksi lengkap Case Study 2
+├── case02-mini-pipeline/
+│   ├── README.md           ← Instruksi lengkap Case Study 2
+│   ├── data/
+│   │   ├── reads.fastq     ← Data reads untuk diproses
+│   │   └── gene_regions.bed
+│   └── solutions/
+│       └── solution.sh     ← Solusi (JANGAN DILIHAT DULU! 😄)
+│
+└── case03-motif-scanner/
+    ├── README.md           ← Instruksi lengkap Case Study 3 (Bonus)
     ├── data/
-    │   ├── reads.fastq     ← Data reads untuk diproses
-    │   └── gene_regions.bed
+    │   └── lambda_virus.fasta
     └── solutions/
         └── solution.sh     ← Solusi (JANGAN DILIHAT DULU! 😄)
 ```
@@ -70,7 +85,7 @@ hands-on/
 cd hands-on/
 
 # Buat direktori kerja kamu sendiri
-mkdir -p my_work/case01 my_work/case02
+mkdir -p my_work/case01 my_work/case02 my_work/case03
 
 # Lihat semua file yang tersedia
 ls -R
@@ -88,6 +103,11 @@ cd ../case02-mini-pipeline/
 cat README.md   # Baca instruksi!
 ```
 
+### Langkah 4: Mulai Case Study 3 (Bonus Challenge)
+```bash
+cd ../case03-motif-scanner/
+cat README.md   # Baca instruksi!
+```
 ---
 
 ## 📝 Tips Sesi Hands-on

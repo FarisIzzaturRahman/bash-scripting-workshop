@@ -211,81 +211,35 @@ echo "AT count: $AT"
 
 ---
 
-## 📝 Task 4: Filter Sequence (15 menit)
+## 📝 Task 4: Filter Sequence (10 menit)
 
-### 4.1 Ekstrak sequence dari organisme tertentu
+### 4.1 Ekstrak sekuens dari organisme tertentu
 
-**Tugas:** Ekstrak semua sequence dari **Homo sapiens** ke file baru!
+**Tugas:** Ekstrak semua sekuens dari **Homo sapiens** ke file baru!
 
-💡 Petunjuk: Kamu perlu mengambil header yang mengandung "Homo sapiens" **beserta sequence-nya**
+💡 **Tantangan**: Karena baris sekuens pada FASTA ini terbagi menjadi beberapa baris (multi-line), perintah `grep` biasa akan kesulitan mengambil sekuens secara utuh. Cara paling mudah dan populer di bioinformatika adalah menggunakan `awk` dengan mendefinisikan pembatas rekam (*Record Separator*) `RS=">"`:
 
 ```bash
-# Petunjuk cara kerja:
-# grep -A N "pola" file  → tampilkan N baris setelah setiap match
+# Menggunakan trik awk RS=">" untuk mengambil record Homo sapiens secara utuh
+awk -v RS=">" 'NR>1 && /Homo sapiens/ {printf ">%s", $0}' data/sequences.fasta > human_sequences.fasta
 
-# Coba tulis perintahmu di sini:
-# ...
-
-# Simpan ke file
-# ... > human_sequences.fasta
-
-# Verifikasi hasilnya
+# Verifikasi hasilnya (hitung jumlah sekuens di file baru)
 grep -c "^>" human_sequences.fasta
-echo "sequences dari Homo sapiens"
 ```
 
-<details>
-<summary>🔍 Petunjuk (pendekatan sederhana)</summary>
-
-```bash
-# Untuk FASTA dengan sequence 1 baris:
-grep -A 4 "Homo sapiens" data/sequences.fasta | grep -v "^--$" > human_seqs.fasta
-```
-
-Catatan: Pendekatan terbaik menggunakan script (lihat solution.sh)
-
-</details>
-
-### 4.2 Temukan sequence dengan GC content tinggi
-
-**Tugas:** Mana sequence yang memiliki GC > 50%?
-
-Ini membutuhkan loop. Coba baca script contoh di modul 5!
 
 ---
 
-## 📝 Task 5: Bonus — Script Sederhana (10 menit)
+## 📝 Task 5: Script Pelaporan Otomatis (15 menit)
 
-Buat script `analyze_fasta.sh` yang secara otomatis:
-1. Menerima nama file FASTA sebagai argumen
-2. Menghitung jumlah sequence
-3. Menghitung total nukleotida
-4. Menghitung GC content
-5. Menampilkan hasilnya dengan format yang rapi
+Gunakan berkas template/skeleton script `analyze_fasta_template.sh` yang telah disediakan. Tugas Anda adalah melengkapi bagian `# TODO` di dalamnya agar script tersebut dapat berjalan otomatis menganalisis file FASTA apa saja yang dimasukkan sebagai argumen.
+
+1. Buka berkas `analyze_fasta_template.sh` di editor.
+2. Lengkapi TODO 1 s.d. TODO 5 menggunakan perintah dasar yang telah Anda pelajari.
+3. Jalankan dan uji script Anda dengan perintah berikut:
 
 ```bash
-#!/usr/bin/env bash
-# analyze_fasta.sh
-# Penggunaan: bash analyze_fasta.sh <file.fasta>
-
-INPUT="$1"
-
-# Tambahkan kode kamu di sini:
-echo "Analisis file: $INPUT"
-
-# 1. Hitung sequence
-# ...
-
-# 2. Total nukleotida
-# ...
-
-# 3. GC content
-# ...
-```
-
-**Test script kamu:**
-```bash
-bash analyze_fasta.sh data/sequences.fasta
+bash analyze_fasta_template.sh data/sequences.fasta
 ```
 
 ---

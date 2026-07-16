@@ -244,111 +244,22 @@ awk '{print $6}' data/gene_regions.bed | sort | uniq -c
 
 ---
 
-## 📝 Task 4: Buat Pipeline Script (10 menit)
+## 📝 Task 4: Bangun Pipeline Script Otomatis (10 menit)
 
-Sekarang saatnya menggabungkan semua analisis di atas ke dalam **satu bash script yang bisa dijalankan otomatis**!
+Sekarang saatnya menyatukan semua perintah analisis di atas ke dalam satu bash script agar bisa dijalankan secara otomatis dengan satu perintah!
 
-**Tugas:** Buat file `my_pipeline/scripts/run_pipeline.sh`
+Gunakan berkas template `run_pipeline_template.sh` yang telah disediakan. Tugas Anda adalah melengkapi bagian `# TODO` (TODO 1 s.d. TODO 7) di dalamnya menggunakan perintah-perintah yang telah Anda coba di Task 1, 2, dan 3.
 
+**Cara Menjalankan Script:**
 ```bash
-#!/usr/bin/env bash
-# ============================================================
-# run_pipeline.sh — Mini Bioinformatics Pipeline
-# OmicsLite Workshop 2026
-# Penggunaan: bash run_pipeline.sh <fastq_file> <bed_file>
-# ============================================================
+# Jalankan script template dengan menyertakan argumen data input
+bash run_pipeline_template.sh data/reads.fastq data/gene_regions.bed
 
-set -euo pipefail
-
-# ---- Konfigurasi ----
-FASTQ="${1:-data/reads.fastq}"
-BED="${2:-data/gene_regions.bed}"
-RESULTS_DIR="results"
-LOG_FILE="logs/pipeline_$(date '+%Y%m%d_%H%M%S').log"
-
-# ---- Setup ----
-mkdir -p "$RESULTS_DIR/qc" "$RESULTS_DIR/stats" "logs"
-
-# ---- Fungsi logging ----
-log() {
-    echo "[$(date '+%H:%M:%S')] $1" | tee -a "$LOG_FILE"
-}
-
-# ---- Mulai pipeline ----
-log "Memulai pipeline analisis..."
-log "FASTQ: $FASTQ"
-log "BED:   $BED"
-
-# ---- Step 1: Validasi input ----
-log "Step 1: Validasi input file..."
-
-# Tambahkan validasi file di sini!
-# (Cek apakah file ada dengan [ -f ] )
-# ...
-
-log "  ✅ Input file tervalidasi"
-
-# ---- Step 2: FASTQ QC ----
-log "Step 2: Analisis FASTQ..."
-
-{
-    echo "FASTQ QC Report"
-    echo "Generated: $(date)"
-    echo "File: $FASTQ"
-    echo "---"
-
-    # Hitung reads
-    READS=$(grep -c "^@" "$FASTQ")
-    echo "Total reads: $READS"
-
-    # Ukuran file
-    echo "File size: $(du -sh "$FASTQ" | cut -f1)"
-
-    # Tambahkan statistik lain...
-} > "$RESULTS_DIR/qc/fastq_report.txt"
-
-log "  ✅ FASTQ QC selesai → $RESULTS_DIR/qc/fastq_report.txt"
-
-# ---- Step 3: BED Analysis ----
-log "Step 3: Analisis BED..."
-
-{
-    echo "BED Analysis Report"
-    echo "Generated: $(date)"
-    echo "File: $BED"
-    echo "---"
-
-    echo "Total regions: $(wc -l < "$BED")"
-    echo ""
-    echo "Distribusi per kromosom:"
-    cut -f 1 "$BED" | sort | uniq -c | sort -rn
-
-    echo ""
-    echo "Statistik panjang region:"
-    awk '{len=$3-$2; sum+=len; n++;
-          if(len>max||n==1) max=len;
-          if(len<min||n==1) min=len}
-         END {print "Min:", min, "bp";
-              print "Max:", max, "bp";
-              print "Avg:", int(sum/n), "bp";
-              print "Total:", sum, "bp"}' "$BED"
-} > "$RESULTS_DIR/stats/bed_analysis.txt"
-
-log "  ✅ BED analysis selesai → $RESULTS_DIR/stats/bed_analysis.txt"
-
-# ---- Selesai ----
-log "Pipeline selesai! Lihat hasil di: $RESULTS_DIR/"
-```
-
-**Jalankan pipeline:**
-```bash
-chmod +x my_pipeline/scripts/run_pipeline.sh
-bash my_pipeline/scripts/run_pipeline.sh
-
-# Lihat hasilnya
-cat my_pipeline/results/qc/fastq_report.txt
-cat my_pipeline/results/stats/bed_analysis.txt
-cat my_pipeline/logs/*.log
+# Lihat hasil output yang terbuat secara otomatis di folder project baru:
+cat my_analysis_project/results/qc/fastq_qc_report.txt
+cat my_analysis_project/results/stats/bed_analysis_report.txt
+cat my_analysis_project/results/pipeline_summary.txt
+cat my_analysis_project/logs/pipeline.log
 ```
 
 ---

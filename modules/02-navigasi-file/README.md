@@ -284,6 +284,35 @@ ls chr[0-9]*.bed        # File BED untuk kromosom 1-9
 
 ---
 
+## 2.7 Mencari File dengan `find`
+
+Ketika proyek bioinformatika berkembang menjadi ratusan folder dan file, mencari file tertentu (misalnya, semua file FASTQ hasil sequencing) secara manual akan sangat melelahkan. Perintah `find` digunakan untuk melakukan pencarian berkas secara otomatis berdasarkan nama, tipe, ukuran, dan parameter lainnya.
+
+### Sintaks Dasar:
+```bash
+find <path_pencarian> <kriteria> <pola>
+```
+
+### Contoh Penggunaan:
+```bash
+# 1. Mencari berdasarkan nama (name)
+find . -name "*.fasta"              # Cari file .fasta di folder saat ini & subfoldernya
+find . -iname "*bact*"              # Cari file yang mengandung kata "bact" (case-insensitive)
+
+# 2. Mencari berdasarkan tipe (type: f = file, d = direktori)
+find . -type d -name "data"         # Cari direktori bernama "data"
+find . -type f -name "*.fastq"      # Cari file biasa yang berakhiran .fastq
+
+# 3. Mencari berdasarkan ukuran (size)
+find . -size +10M                   # Cari file yang lebih besar dari 10 Megabyte (+10M)
+find . -size -1M                    # Cari file yang lebih kecil dari 1 Megabyte (-1M)
+
+# 4. Mengombinasikan find dengan pipe
+find . -type f -name "*.fastq" | wc -l  # Hitung jumlah file FASTQ di seluruh subfolder
+```
+
+---
+
 ## 🧬 Latihan: Setup Project Bioinformatika
 
 ```bash
@@ -319,6 +348,7 @@ find . -type f | wc -l
 - [ ] `cp`, `mv`, `rm` untuk manajemen file
 - [ ] `head` dan `tail` untuk preview file
 - [ ] `*` wildcard untuk banyak file
+- [ ] Menggunakan `find` untuk mencari file berdasarkan kriteria (nama, tipe, ukuran)
 
 ---
 

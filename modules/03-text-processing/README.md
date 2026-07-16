@@ -68,6 +68,34 @@ grep "Homo sapiens" sequences.fasta
 grep -i "BRCA1\|TP53\|KRAS" sequences.fasta
 ```
 
+### 🧬 Pencarian Motif DNA dengan Regular Expressions (Regex)
+`grep` mendukung pencarian menggunakan ekspresi reguler (regular expressions) yang sangat berguna untuk mendeteksi motif sekuens DNA/RNA atau pola teks kompleks:
+
+```bash
+# 1. Menggunakan Extended Regex dengan opsi -E (mencari motif A ATAU B)
+# Mencari sekuens yang mengandung situs restriksi EcoRI (GAATTC) ATAU HindIII (AAGCTT)
+grep -E "GAATTC|AAGCTT" sequences.fasta
+
+# 2. Menggunakan titik (.) sebagai wildcard (satu karakter apa saja)
+# Contoh: mencari situs motif "C-N-N-G" (C, diikuti dua basa bebas, diikuti G)
+grep "C..G" sequences.fasta
+
+# 3. Menggunakan kurung siku ([...]) untuk mencocokkan set karakter tertentu
+# Contoh: mencari daerah kaya purin (A atau G) sepanjang 5 basa berurutan
+grep -E "[AG]{5}" sequences.fasta
+
+# Contoh: mencari sekuens kaya pirimidin (C atau T) sepanjang 10 basa berurutan
+grep -E "[CT]{10}" sequences.fasta
+
+# 4. Mencocokkan kodon di awal (^) atau akhir ($) baris sekuens
+grep "^ATG" sequences.fasta        # Sekuens yang diawali start kodon ATG
+grep "TAA$" sequences.fasta        # Sekuens yang diakhiri stop kodon TAA
+
+# 5. Menampilkan HANYA motif yang cocok (-o = only-matching)
+# Sangat berguna untuk ekstraksi motif spesifik (tidak mencetak seluruh baris sekuens)
+grep -o "GAATTC" sequences.fasta
+```
+
 ---
 
 ## 3.2 Wc — Word Count
@@ -365,6 +393,7 @@ grep -v "^>" sequences.fasta | tr -d '\n' | wc -c
 ## ✅ Checkpoint Modul 3
 
 - [ ] `grep` dengan berbagai flag (-i, -v, -c, -n, -r)
+- [ ] Pencarian motif DNA/RNA menggunakan Regular Expressions (Regex) pada `grep`
 - [ ] `wc -l` untuk menghitung baris
 - [ ] `cut -f` untuk mengambil kolom
 - [ ] `sort` dan `uniq` untuk analisis distribusi

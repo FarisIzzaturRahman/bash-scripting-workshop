@@ -108,16 +108,7 @@ OUTPUT_FILE="${SAMPLE_NAME}_processed_${CURRENT_DATE}.fastq"
 echo "Output akan disimpan di: $OUTPUT_FILE"
 ```
 
-### Variabel spesial bash:
-```bash
-$0    # Nama script
-$1    # Argumen pertama
-$2    # Argumen kedua
-$@    # Semua argumen
-$#    # Jumlah argumen
-$?    # Exit code perintah sebelumnya (0 = sukses)
-$$    # PID (Process ID) script ini
-```
+
 
 ---
 
@@ -159,7 +150,42 @@ bash script.sh sequences.fasta hasil.txt
 
 ---
 
-## 5.6 Kondisi (If-Else)
+## 5.6 Variabel Spesial & Exit Code
+
+Bash menyediakan beberapa variabel bawaan khusus yang sangat berguna untuk mendeteksi status jalannya perintah dan parameter:
+
+| Variabel | Fungsi |
+|----------|--------|
+| `$0` | Nama script bash itu sendiri (misalnya: `script.sh`) |
+| `$1`, `$2`, dst. | Argumen/parameter ke-1, ke-2, dst. yang diberikan saat menjalankan script |
+| `$#` | Jumlah total argumen yang dimasukkan ke dalam script |
+| `$@` | Seluruh daftar argumen yang diberikan (sebagai array/list) |
+| `$?` | **Exit Status/Exit Code** dari perintah terakhir yang dieksekusi |
+
+### Memahami Exit Status (`$?`)
+Setiap kali sebuah perintah selesai dijalankan di terminal Linux, perintah tersebut akan secara otomatis mengembalikan kode status berupa angka:
+*   `0`: Sukses (tidak terjadi kesalahan/error).
+*   `1` s.d. `255`: Gagal (terdapat error teknis atau kondisi tidak terpenuhi).
+
+*Contoh mendeteksi keberhasilan perintah:*
+```bash
+# Menjalankan pencarian motif DNA
+grep "GAATTC" data/gene_A.fasta
+
+# Memeriksa status pencarian (0 jika motif ditemukan, 1 jika tidak ditemukan)
+echo "Status pencarian: $?"
+
+# Contoh penanganan error manual:
+mkdir -p results/
+if [ $? -ne 0 ]; then
+    echo "ERROR: Gagal membuat direktori results/"
+    exit 1
+fi
+```
+
+---
+
+## 5.7 Kondisi (If-Else)
 
 ```bash
 #!/usr/bin/env bash
@@ -217,7 +243,7 @@ fi
 
 ---
 
-## 5.7 Loop — For
+## 5.8 Loop — For
 
 ```bash
 #!/usr/bin/env bash
@@ -273,7 +299,7 @@ done
 
 ---
 
-## 5.8 Script Lengkap: Analisis Multi-FASTA
+## 5.9 Script Lengkap: Analisis Multi-FASTA
 
 Lihat script lengkap di [`scripts/fasta_stats.sh`](scripts/fasta_stats.sh)
 
@@ -346,7 +372,7 @@ echo "✅ Analisis selesai!"
 
 ---
 
-## 5.9 Tips Best Practice Script
+## 5.10 Tips Best Practice Script
 
 ```bash
 #!/usr/bin/env bash
@@ -389,6 +415,7 @@ exit 0
 - [ ] Memahami shebang line (`#!/usr/bin/env bash`)
 - [ ] Menggunakan variabel dan command substitution
 - [ ] Menerima argumen dari command line
+- [ ] Memahami Exit Status/Exit Code (`$?`) dan kegunaannya untuk deteksi error
 - [ ] Menggunakan kondisi if-else
 - [ ] Membuat loop untuk memproses banyak file
 - [ ] Memahami pola loop file berpasangan (*paired-end reads*) menggunakan substitusi variabel Bash

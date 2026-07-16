@@ -17,6 +17,7 @@ LOG_FILE="${PROJECT_DIR}/logs/pipeline.log"
 
 # Fungsi helper untuk logging (sudah disediakan)
 log() {
+    mkdir -p "$(dirname "$LOG_FILE")"
     local msg="[$(date '+%H:%M:%S')] $1"
     echo "$msg" | tee -a "$LOG_FILE"
 }

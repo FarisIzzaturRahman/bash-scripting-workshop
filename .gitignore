@@ -1,0 +1,28 @@
+# Output hasil hands-on peserta
+my_analysis_project/
+results/
+*.log
+
+# File sementara
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Output terkompresi
+*.gz
+*.zip
+!data/*.gz
+
+# Python (jika peserta lanjut ke Python)
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+env/

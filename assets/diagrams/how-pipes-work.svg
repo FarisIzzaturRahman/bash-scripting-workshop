@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="760" height="320" fill="#0d1117"/>
+  <text x="380" y="36" fill="#e6edf3" font-size="20" font-weight="700" text-anchor="middle">Cara Kerja Pipe ( | )</text>
+  <text x="380" y="62" fill="#8b949e" font-size="13" text-anchor="middle">output satu perintah menjadi input perintah berikutnya</text>
+
+  <!-- Example command -->
+  <rect x="120" y="86" width="520" height="34" rx="6" fill="#161b22" stroke="#30363d"/>
+  <text x="380" y="109" fill="#7ee787" font-size="15" font-family="monospace" text-anchor="middle">cat seq.fasta | grep "&gt;" | sort | head</text>
+
+  <!-- Stage 1 -->
+  <rect x="40" y="160" width="150" height="80" rx="10" fill="#161b22" stroke="#4EAA25" stroke-width="2"/>
+  <text x="115" y="192" fill="#e6edf3" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">cat</text>
+  <text x="115" y="214" fill="#8b949e" font-size="11" text-anchor="middle">baca semua</text>
+  <text x="115" y="228" fill="#8b949e" font-size="11" text-anchor="middle">isi file</text>
+
+  <!-- pipe 1 -->
+  <line x1="190" y1="200" x2="232" y2="200" stroke="#d2a8ff" stroke-width="3" marker-end="url(#p)"/>
+  <text x="211" y="188" fill="#d2a8ff" font-size="16" text-anchor="middle" font-weight="700">|</text>
+
+  <!-- Stage 2 -->
+  <rect x="234" y="160" width="150" height="80" rx="10" fill="#161b22" stroke="#4EAA25" stroke-width="2"/>
+  <text x="309" y="192" fill="#e6edf3" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">grep "&gt;"</text>
+  <text x="309" y="214" fill="#8b949e" font-size="11" text-anchor="middle">ambil baris</text>
+  <text x="309" y="228" fill="#8b949e" font-size="11" text-anchor="middle">header saja</text>
+
+  <!-- pipe 2 -->
+  <line x1="384" y1="200" x2="426" y2="200" stroke="#d2a8ff" stroke-width="3" marker-end="url(#p)"/>
+  <text x="405" y="188" fill="#d2a8ff" font-size="16" text-anchor="middle" font-weight="700">|</text>
+
+  <!-- Stage 3 -->
+  <rect x="428" y="160" width="130" height="80" rx="10" fill="#161b22" stroke="#4EAA25" stroke-width="2"/>
+  <text x="493" y="192" fill="#e6edf3" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">sort</text>
+  <text x="493" y="214" fill="#8b949e" font-size="11" text-anchor="middle">urutkan</text>
+
+  <!-- pipe 3 -->
+  <line x1="558" y1="200" x2="600" y2="200" stroke="#d2a8ff" stroke-width="3" marker-end="url(#p)"/>
+  <text x="579" y="188" fill="#d2a8ff" font-size="16" text-anchor="middle" font-weight="700">|</text>
+
+  <!-- Stage 4 -->
+  <rect x="602" y="160" width="120" height="80" rx="10" fill="#161b22" stroke="#1f6feb" stroke-width="2"/>
+  <text x="662" y="192" fill="#e6edf3" font-size="14" font-weight="700" text-anchor="middle" font-family="monospace">head</text>
+  <text x="662" y="214" fill="#8b949e" font-size="11" text-anchor="middle">tampilkan</text>
+  <text x="662" y="228" fill="#8b949e" font-size="11" text-anchor="middle">10 teratas</text>
+
+  <text x="380" y="288" fill="#7ee787" font-size="12" text-anchor="middle">💡 Tiap data mengalir ke kanan — seperti air melewati pipa</text>
+
+  <defs>
+    <marker id="p" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#d2a8ff"/>
+    </marker>
+  </defs>
+</svg>

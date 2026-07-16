@@ -1,0 +1,28 @@
+{
+  "name": "Bash for Bioinformatics Workshop",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  
+  // Instalasi package Linux tambahan yang sangat krusial untuk workshop
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y bc tree dos2unix",
+
+  // Kustomisasi VS Code di dalam Codespace
+  "customizations": {
+    "vscode": {
+      // Ekstensi yang otomatis terinstall untuk mendukung proses belajar peserta
+      "extensions": [
+        "mads-hartmann.bash-ide-vscode",           // Auto-complete dan analisis kode Bash
+        "foxundermoon.shellman",                   // Snippet & template penulisan Bash
+        "yzhang.markdown-all-in-one",              // Membaca modul (.md) dengan rapi
+        "mutianwang.bio-format",                   // Penyorot warna (syntax highlighting) format FASTA/FASTQ/GFF/BED
+        "bierner.markdown-preview-github-styles"   // Preview markdown dengan gaya GitHub yang nyaman dibaca
+      ],
+      // Pengaturan khusus editor untuk mempermudah pemula
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "editor.wordWrap": "on"
+      }
+    }
+  }
+}

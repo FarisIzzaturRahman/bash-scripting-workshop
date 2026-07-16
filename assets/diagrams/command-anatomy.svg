@@ -1,0 +1,42 @@
+<svg viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="820" height="360" fill="#0D1117"/>
+  <text x="410" y="44" fill="#E6EDF3" font-size="22" font-weight="700" text-anchor="middle">Anatomi Sebuah Perintah</text>
+  <text x="410" y="70" fill="#8B949E" font-size="13" text-anchor="middle">Setiap perintah punya bagian-bagian dengan peran berbeda</text>
+
+  <!-- command line -->
+  <rect x="70" y="100" width="680" height="60" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+  <text x="92" y="139" font-family="Consolas, monospace" font-size="26" xml:space="preserve">
+    <tspan fill="#7EE787" font-weight="700">grep</tspan><tspan fill="#56D4DD" font-weight="700" dx="22">-i</tspan><tspan fill="#F0B429" font-weight="700" dx="22">"Homo"</tspan><tspan fill="#C9D1D9" font-weight="700" dx="22">sequences.fasta</tspan>
+  </text>
+
+  <!-- connectors + labels -->
+  <!-- grep -->
+  <line x1="125" y1="165" x2="125" y2="205" stroke="#7EE787" stroke-width="2"/>
+  <rect x="60" y="208" width="150" height="74" rx="8" fill="#0E2A16" stroke="#7EE787" stroke-width="1.5"/>
+  <text x="135" y="232" fill="#7EE787" font-size="14" font-weight="700" text-anchor="middle">PERINTAH</text>
+  <text x="135" y="252" fill="#C9D1D9" font-size="12" text-anchor="middle">program yang</text>
+  <text x="135" y="268" fill="#C9D1D9" font-size="12" text-anchor="middle">dijalankan</text>
+
+  <!-- -i flag -->
+  <line x1="210" y1="165" x2="270" y2="205" stroke="#56D4DD" stroke-width="2"/>
+  <rect x="225" y="208" width="150" height="74" rx="8" fill="#06262B" stroke="#56D4DD" stroke-width="1.5"/>
+  <text x="300" y="232" fill="#56D4DD" font-size="14" font-weight="700" text-anchor="middle">OPSI / FLAG</text>
+  <text x="300" y="252" fill="#C9D1D9" font-size="12" text-anchor="middle">ubah perilaku</text>
+  <text x="300" y="268" fill="#C9D1D9" font-size="12" text-anchor="middle">(-i = abaikan kapital)</text>
+
+  <!-- "Homo" pattern -->
+  <line x1="320" y1="165" x2="455" y2="205" stroke="#F0B429" stroke-width="2"/>
+  <rect x="390" y="208" width="150" height="74" rx="8" fill="#2B210A" stroke="#F0B429" stroke-width="1.5"/>
+  <text x="465" y="232" fill="#F0B429" font-size="14" font-weight="700" text-anchor="middle">ARGUMEN</text>
+  <text x="465" y="252" fill="#C9D1D9" font-size="12" text-anchor="middle">pola yang dicari</text>
+  <text x="465" y="268" fill="#C9D1D9" font-size="12" text-anchor="middle">(input data)</text>
+
+  <!-- file -->
+  <line x1="560" y1="165" x2="650" y2="205" stroke="#C9D1D9" stroke-width="2"/>
+  <rect x="575" y="208" width="170" height="74" rx="8" fill="#1C2128" stroke="#8B949E" stroke-width="1.5"/>
+  <text x="660" y="232" fill="#E6EDF3" font-size="14" font-weight="700" text-anchor="middle">FILE TARGET</text>
+  <text x="660" y="252" fill="#C9D1D9" font-size="12" text-anchor="middle">tempat perintah</text>
+  <text x="660" y="268" fill="#C9D1D9" font-size="12" text-anchor="middle">bekerja</text>
+
+  <text x="410" y="320" fill="#8B949E" font-size="13" text-anchor="middle" font-style="italic">Dibaca: "cari pola Homo (abaikan huruf besar/kecil) di dalam file sequences.fasta"</text>
+</svg>

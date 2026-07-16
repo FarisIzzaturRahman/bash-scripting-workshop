@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="760" height="380" fill="#0d1117"/>
+  <text x="380" y="36" fill="#e6edf3" font-size="20" font-weight="700" text-anchor="middle">Bagaimana Perintahmu Sampai ke Komputer?</text>
+
+  <!-- User -->
+  <g>
+    <circle cx="80" cy="190" r="34" fill="#1f6feb"/>
+    <text x="80" y="196" fill="#fff" font-size="26" text-anchor="middle">🧑‍🔬</text>
+    <text x="80" y="250" fill="#8b949e" font-size="14" text-anchor="middle">Kamu</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <line x1="118" y1="190" x2="178" y2="190" stroke="#4EAA25" stroke-width="3" marker-end="url(#a)"/>
+  <text x="148" y="178" fill="#7ee787" font-size="11" text-anchor="middle">ketik</text>
+
+  <!-- Terminal -->
+  <g>
+    <rect x="182" y="140" width="130" height="100" rx="10" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <text x="247" y="180" fill="#e6edf3" font-size="15" font-weight="700" text-anchor="middle">Terminal</text>
+    <text x="247" y="206" fill="#8b949e" font-size="11" text-anchor="middle">jendela tempat</text>
+    <text x="247" y="222" fill="#8b949e" font-size="11" text-anchor="middle">mengetik</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <line x1="314" y1="190" x2="374" y2="190" stroke="#4EAA25" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- Shell / Bash -->
+  <g>
+    <rect x="378" y="140" width="130" height="100" rx="10" fill="#161b22" stroke="#4EAA25" stroke-width="2"/>
+    <text x="443" y="178" fill="#7ee787" font-size="15" font-weight="700" text-anchor="middle">Shell (Bash)</text>
+    <text x="443" y="206" fill="#8b949e" font-size="11" text-anchor="middle">menerjemahkan</text>
+    <text x="443" y="222" fill="#8b949e" font-size="11" text-anchor="middle">perintah</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <line x1="510" y1="190" x2="570" y2="190" stroke="#4EAA25" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- Kernel -->
+  <g>
+    <rect x="574" y="140" width="130" height="100" rx="10" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <text x="639" y="178" fill="#e6edf3" font-size="15" font-weight="700" text-anchor="middle">Kernel</text>
+    <text x="639" y="206" fill="#8b949e" font-size="11" text-anchor="middle">mengatur</text>
+    <text x="639" y="222" fill="#8b949e" font-size="11" text-anchor="middle">hardware</text>
+  </g>
+
+  <!-- Return arrow -->
+  <path d="M 639 240 L 639 300 L 247 300 L 247 242" fill="none" stroke="#f78166" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#b)"/>
+  <text x="443" y="322" fill="#f78166" font-size="12" text-anchor="middle">hasil ditampilkan kembali ke terminal</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4EAA25"/>
+    </marker>
+    <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f78166"/>
+    </marker>
+  </defs>
+</svg>

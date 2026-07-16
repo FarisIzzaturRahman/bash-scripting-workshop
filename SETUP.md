@@ -142,10 +142,10 @@ curl --version | head -1
 git --version
 
 # Clone repo
-git clone https://github.com/omicslite/bash-bioinformatics-workshop.git
+git clone https://github.com/FarisIzzaturRahman/bash-scripting-workshop.git
 
 # Masuk ke direktori
-cd bash-bioinformatics-workshop
+cd bash-scripting-workshop
 
 # Lihat isi repo
 ls -la

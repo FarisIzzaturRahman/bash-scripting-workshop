@@ -8,7 +8,7 @@
 ![OmicsLite](https://img.shields.io/badge/OmicsLite-Workshop-purple?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/omicslite/bash-bioinformatics-workshop)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/FarisIzzaturRahman/bash-scripting-workshop)
 *(Klik tombol di atas untuk membuka materi langsung di browser via GitHub Codespaces)*
 
 **"Bioinformatika dimulai dari satu baris command."**
@@ -72,8 +72,8 @@ cat SETUP.md
 
 ### Langkah 2: Clone repositori ini
 ```bash
-git clone https://github.com/omicslite/bash-bioinformatics-workshop.git
-cd bash-bioinformatics-workshop
+git clone https://github.com/FarisIzzaturRahman/bash-scripting-workshop.git
+cd bash-scripting-workshop
 ```
 
 ### Langkah 3: Verifikasi bash tersedia

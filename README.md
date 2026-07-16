@@ -48,7 +48,6 @@ bash-bioinformatics-workshop/
 │   └── case02-mini-pipeline/    # Mini pipeline bioinformatika
 │
 ├── 📄 cheatsheet/           # Referensi cepat perintah bash
-├── 🎬 slides/               # PPT presentasi + modul DOCX (siap live!)
 ├── 📝 assessment/           # Kuis pasca-workshop + kunci jawaban
 ├── 📚 resources/            # Referensi & bacaan lanjutan
 ├── 🖼️ assets/               # Diagram & ilustrasi
@@ -158,7 +157,6 @@ cheatsheet/  ← bookmark ini!
 | Ingin menguji pemahaman | [assessment/](assessment/quiz.md) — kuis + kunci jawaban |
 | Mau belajar lebih lanjut | [resources/](resources/README.md) — buku, tools, komunitas |
 | Seorang pemateri/instruktur | [INSTRUCTOR-GUIDE.md](INSTRUCTOR-GUIDE.md) |
-| Butuh slide presentasi / modul cetak | [slides/](slides/) — PPTX & DOCX siap pakai |
 
 ---
 

@@ -327,14 +327,14 @@ curl -O https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.4
 
 | Format | Ekstensi | Untuk | Kolom wajib | Koordinat |
 |--------|---------|-------|-------------|-----------|
-| FASTA | `.fa`, `.fasta`, `.fna` | Sequence | Header + Seq | - |
-| FASTQ | `.fq`, `.fastq` | Sequencing reads + quality | 4 baris per read | - |
-| BED | `.bed` | Genomic regions | 3 (chr, start, end) | **0-based** |
+| FASTA | `.fa`, `.fasta`, `.fna`, `.faa`, `.fsa` | Sequence | Header + Seq | - |
+| FASTQ | `.fq`, `.fastq`, `.fq.gz`, `.fastq.gz` | Sequencing reads + quality | 4 baris per read | - |
+| BED | `.bed`, `.bed.gz` | Genomic regions | 3 (chr, start, end) | **0-based** |
 | GFF3 | `.gff`, `.gff3` | Gene annotation | 9 kolom | **1-based** |
 | GTF | `.gtf` | Gene annotation (Ensembl) | 9 kolom | **1-based** |
 | SAM | `.sam` | Alignment | 11+ kolom | **1-based** |
 | BAM | `.bam` | Alignment (binary SAM) | - | **1-based** |
-| VCF | `.vcf` | Genetic variants | 8+ kolom | **1-based** |
+| VCF | `.vcf`, `.vcf.gz` | Genetic variants | 8+ kolom | **1-based** |
 
 ---
 

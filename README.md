@@ -9,6 +9,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/FarisIzzaturRahman/bash-scripting-workshop)
+<br>
 *(Klik tombol di atas untuk membuka materi langsung di browser via GitHub Codespaces)*
 
 **"Bioinformatika dimulai dari satu baris command."**

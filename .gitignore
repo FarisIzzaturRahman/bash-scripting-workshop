@@ -18,7 +18,7 @@ Thumbs.db
 # Output terkompresi
 *.gz
 *.zip
-!data/*.gz
+!**/data/*.gz
 
 # Python (jika peserta lanjut ke Python)
 __pycache__/

@@ -8,13 +8,18 @@
 
 ## 5.1 Apa itu Bash Script?
 
-Bash script adalah **file teks yang berisi sekumpulan perintah bash** yang dijalankan berurutan. Bayangkan kamu mengetik 20 perintah di terminal — daripada ketik ulang setiap kali, simpan dalam satu file dan jalankan sekali!
+Hingga Modul 4, Anda telah berinteraksi dengan terminal secara **interaktif** (mode CLI/Command Line Interface). Anda mengetik satu perintah, menekan Enter, melihat hasilnya, lalu mengetik perintah berikutnya. 
 
-### Mengapa menulis script?
-- ♻️ **Reproducible**: Analisis bisa diulang dengan hasil sama
-- ⚡ **Efisien**: Jalankan 100 file sekaligus
-- 📋 **Dokumentasi**: Script = dokumentasi analisis kamu
-- 🤖 **Otomasi**: Jalankan di malam hari tanpa dijaga
+**Bash Script** adalah langkah otomasi berikutnya: kita menyimpan sekumpulan perintah terminal tersebut ke dalam sebuah **berkas teks** (biasanya berakhiran `.sh`) agar komputer dapat mengeksekusi semuanya dari atas ke bawah secara otomatis tanpa perlu kita ketik satu per satu.
+
+### 💡 Perbedaan CLI (Interaktif) vs Scripting (Otomasi)
+
+| Aspek | Mode CLI (Modul 1–4) | Mode Scripting (Modul 5) |
+| :--- | :--- | :--- |
+| **Cara Kerja** | Mengetik langsung perintah di prompt terminal. | Menulis kumpulan perintah di file teks (`.sh`), lalu dijalankan sekali. |
+| **Interaksi** | Langkah demi langkah (Ketik $\rightarrow$ Enter $\rightarrow$ Hasil). | Berjalan otomatis dari baris pertama sampai akhir. |
+| **Tujuan** | Eksplorasi data cepat, uji coba perintah, cek file. | Otomasi tugas berulang, analisis batch, membangun pipeline. |
+| **Skalabilitas** | Melelahkan jika harus memproses 100 sampel data. | Sangat mudah memproses ratusan sampel menggunakan Loop. |
 
 ---
 

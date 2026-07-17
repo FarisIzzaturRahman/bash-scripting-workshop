@@ -49,7 +49,6 @@ bash-bioinformatics-workshop/
 │   └── case02-mini-pipeline/    # Mini pipeline bioinformatika
 │
 ├── 📄 cheatsheet/           # Referensi cepat perintah bash
-├── 📝 assessment/           # Kuis pasca-workshop + kunci jawaban
 ├── 📚 resources/            # Referensi & bacaan lanjutan
 ├── 🖼️ assets/               # Diagram & ilustrasi
 ├── SETUP.md                 # ⚡ Mulai di sini! Instalasi & setup
@@ -155,7 +154,6 @@ cheatsheet/  ← bookmark ini!
 | Bingung dengan istilah teknis | [GLOSSARY.md](GLOSSARY.md) — kamus istilah |
 | Kena error & panik | [TROUBLESHOOTING.md](TROUBLESHOOTING.md) — solusi error umum |
 | Butuh referensi perintah cepat | [cheatsheet/](cheatsheet/bash-bio-cheatsheet.md) |
-| Ingin menguji pemahaman | [assessment/](assessment/quiz.md) — kuis + kunci jawaban |
 | Mau belajar lebih lanjut | [resources/](resources/README.md) — buku, tools, komunitas |
 | Seorang pemateri/instruktur | [INSTRUCTOR-GUIDE.md](INSTRUCTOR-GUIDE.md) |
 

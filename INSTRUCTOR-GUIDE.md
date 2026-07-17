@@ -113,7 +113,7 @@ Peserta bingung kenapa `cd data` gagal padahal folder `data` "ada".
 ## 📊 Indikator Keberhasilan Sesi
 
 Workshop dianggap berhasil jika mayoritas peserta bisa:
-- ✅ Menjawab kuis pasca-workshop (lihat `assessment/`) dengan skor ≥ 70%
+- ✅ Menjawab kuis pra/post-workshop dengan skor ≥ 70%
 - ✅ Menyelesaikan minimal Case Study 1 secara mandiri
 - ✅ Menjalankan satu bash script buatan sendiri tanpa error
 

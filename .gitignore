@@ -26,3 +26,6 @@ __pycache__/
 .ipynb_checkpoints/
 venv/
 env/
+
+# Kuis & Jawaban (Pre-test)
+assessment/

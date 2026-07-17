@@ -10,6 +10,15 @@
 
 `grep` adalah senjata utama bioinformatician. Digunakan untuk **mencari pola** dalam file.
 
+> 💡 **Mengenal Berkas Data (Sekilas)**
+> Di modul ini, kita akan berlatih memproses beberapa format berkas standar bioinformatika:
+> * **`.fasta`**: Format sekuens DNA/Protein. Baris nama sekuens diawali tanda `>` (sebagai header), diikuti baris sekuens nukleotida (A, C, T, G).
+> * **`.bed`**: Format koordinat fitur genomik (minimal 3 kolom dipisahkan oleh Tab). Kolom 1 = nama kromosom, Kolom 2 = posisi mulai, Kolom 3 = posisi selesai.
+> * **`.gff`**: Format anotasi genomik yang lebih detail (memiliki 9 kolom dipisahkan oleh Tab).
+> * **`.csv` / `.tsv`**: Format tabel umum (dipisahkan koma atau tab) yang biasa berisi metadata sampel.
+> 
+> *Catatan: Penjelasan mendalam mengenai struktur biologis tiap format di atas akan kita bedah secara tuntas di **Modul 4**.*
+
 ### Sintaks dasar
 ```bash
 grep "pola" file.txt

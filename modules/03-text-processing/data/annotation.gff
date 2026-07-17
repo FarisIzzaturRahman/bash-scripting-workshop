@@ -1,0 +1,6 @@
+chr1	RefSeq	gene	100	2000	.	+	.	ID=gene:BRCA1;Name=BRCA1
+chr1	RefSeq	exon	100	200	.	+	.	Parent=gene:BRCA1
+chr1	RefSeq	exon	500	600	.	+	.	Parent=gene:BRCA1
+chr2	RefSeq	gene	1500	2500	.	-	.	ID=gene:TP53;Name=TP53
+chr2	RefSeq	exon	1500	1700	.	-	.	Parent=gene:TP53
+chr3	RefSeq	gene	10000	12000	.	+	.	ID=gene:KRAS;Name=KRAS

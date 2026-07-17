@@ -1,0 +1,2 @@
+Ini adalah isi dari file 2.
+Dapat digabungkan dengan file 1 menggunakan perintah cat.

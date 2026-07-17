@@ -1,0 +1,5 @@
+SampleID,Condition,Replicate
+SRR001,Control,1
+SRR002,Control,2
+SRR003,Treated,1
+SRR004,Treated,2

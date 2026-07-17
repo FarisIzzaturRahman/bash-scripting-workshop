@@ -219,33 +219,33 @@ touch existing_file.txt
 
 ### `cat` — Concatenate (tampilkan isi file)
 ```bash
-cat sequences.fasta
-cat file1.txt file2.txt         # Gabungkan dan tampilkan
-cat -n sequences.fasta          # Dengan nomor baris
+cat data/sequences.fasta
+cat data/file1.txt data/file2.txt         # Gabungkan dan tampilkan
+cat -n data/sequences.fasta          # Dengan nomor baris
 ```
 
 ### `head` & `tail`
 ```bash
 # 10 baris pertama (default)
-head sequences.fasta
+head data/sequences.fasta
 
 # 5 baris pertama
-head -5 sequences.fasta
-head -n 5 sequences.fasta
+head -5 data/sequences.fasta
+head -n 5 data/sequences.fasta
 
 # 10 baris terakhir
-tail sequences.fasta
+tail data/sequences.fasta
 
 # 20 baris terakhir
-tail -20 reads.fastq
+tail -20 data/reads.fastq
 
 # ⭐ Ikuti file yang sedang ditulis (untuk monitoring)
-tail -f analysis.log
+tail -f data/analysis.log
 ```
 
 ### `less` — Viewer interaktif (untuk file besar)
 ```bash
-less large_file.fastq
+less data/large_file.fastq
 
 # Navigasi di dalam less:
 # ↑↓ atau j/k  → naik/turun baris

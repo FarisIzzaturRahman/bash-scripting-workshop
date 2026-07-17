@@ -1,0 +1,2 @@
+Ini adalah isi dari file 1.
+Dapat digunakan untuk latihan menggabungkan file (cat).

@@ -55,8 +55,7 @@ bash-bioinformatics-workshop/
 ├── AGENDA.md                # Rundown workshop
 ├── FAQ.md                   # ❓ Pertanyaan umum + checklist pra-workshop
 ├── GLOSSARY.md              # 📖 Kamus istilah teknis
-├── TROUBLESHOOTING.md       # 🔧 Solusi error yang sering muncul
-└── INSTRUCTOR-GUIDE.md      # 🎤 Panduan untuk pemateri
+└── TROUBLESHOOTING.md       # 🔧 Solusi error yang sering muncul
 ```
 
 ---

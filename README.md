@@ -155,13 +155,6 @@ cheatsheet/  ← bookmark ini!
 | Kena error & panik | [TROUBLESHOOTING.md](TROUBLESHOOTING.md) — solusi error umum |
 | Butuh referensi perintah cepat | [cheatsheet/](cheatsheet/bash-bio-cheatsheet.md) |
 | Mau belajar lebih lanjut | [resources/](resources/README.md) — buku, tools, komunitas |
-| Seorang pemateri/instruktur | [INSTRUCTOR-GUIDE.md](INSTRUCTOR-GUIDE.md) |
-
----
-
-## 👨‍🏫 Pemateri
-
-Disampaikan oleh praktisi bioinformatika aktif dengan pengalaman dalam analisis data genomik, transcriptomik, dan workflow bioinformatika berbasis Linux.
 
 ---
 
